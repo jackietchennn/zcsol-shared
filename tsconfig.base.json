@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    // ===== 编译目标配置 =====
+    "target": "ES2020",                    // 编译目标版本：ES2020
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 包含的库：ES2020 + DOM API
+    
+    // ===== 模块系统配置 =====
+    "module": "ESNext",                    // 模块系统：使用最新的 ES 模块
+    "moduleResolution": "bundler",         // 模块解析策略：bundler 模式（更适合现代构建工具）
+    "allowImportingTsExtensions": false,    // 允许导入 .ts 扩展名
+    "esModuleInterop": true,               // 启用 ES 模块互操作性
+    "allowSyntheticDefaultImports": true,  // 允许合成默认导入
+    "resolveJsonModule": true,             // 允许导入 JSON 文件
+    "isolatedModules": true,               // 隔离模块编译（提升构建工具兼容性）
+    
+    // ===== 类型检查配置 =====
+    "strict": true,                        // 启用严格模式
+    "allowJs": true,                       // 允许编译 JavaScript 文件
+    "skipLibCheck": true,                  // 跳过库文件类型检查（提升性能）
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+    "noFallthroughCasesInSwitch": true,   // 禁止 switch 语句中的 fallthrough
+    "noUncheckedIndexedAccess": true,     // 禁止未检查的索引访问
+    "exactOptionalPropertyTypes": true,    // 精确的可选属性类型
+    
+    // ===== JSX 配置 =====
+    "jsx": "react-jsx",                    // JSX 转换模式：React 19 的新 JSX 转换
+    
+    // ===== 输出配置 =====
+    "declaration": true,                   // 生成声明文件 (.d.ts)
+    "declarationMap": false,                // 生成声明文件的 source map
+    "sourceMap": false,                     // 生成 source map 文件
+    "removeComments": false,               // 保留注释
+    
+    // ===== 项目引用配置（Monorepo 优化） =====
+    "composite": true,                     // 启用项目引用
+    "incremental": true,                   // 启用增量编译
+    "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo", // 构建信息缓存文件
+    
+    // ===== 实验性功能 =====
+    "verbatimModuleSyntax": true,         // 字面量模块语法（更好的 tree-shaking）
+    // "preserveValueImports": true,          // 保留值导入（优化打包）
+    
+    // ===== 基础路径配置 =====
+    "baseUrl": ".",                        // 基础路径
+    "paths": {
+      "@/*": ["./src/*"]                   // 包内路径别名
+    }
+  },
+  
+  // ===== 通用排除文件配置 =====
+  "exclude": [
+    "node_modules",                        // 排除依赖目录
+    "**/node_modules",                     // 排除所有 node_modules
+    "dist",                                // 排除构建输出目录
+    "**/dist",                             // 排除所有 dist 目录
+    "build",                               // 排除构建目录
+    "**/build",                            // 排除所有 build 目录
+    "coverage",                            // 排除测试覆盖率目录
+    "**/coverage",                         // 排除所有 coverage 目录
+    "**/*.test.ts",                        // 排除测试文件
+    "**/*.test.tsx",                       // 排除 TSX 测试文件
+    "**/*.spec.ts",                        // 排除规格测试文件
+    "**/*.spec.tsx",                       // 排除 TSX 规格测试文件
+    "**/*.stories.ts",                     // 排除 Storybook 文件
+    "**/*.stories.tsx",                    // 排除 Storybook TSX 文件
+    "**/*.config.ts",                      // 排除配置文件
+    "**/*.config.js",                      // 排除 JS 配置文件
+    ".cache",                              // 排除缓存目录
+    "**/.cache",                           // 排除所有缓存目录
+    "temp",                                // 排除临时目录
+    "**/temp",                             // 排除所有临时目录
+    "tmp",                                 // 排除临时目录
+    "**/tmp"                               // 排除所有临时目录
+  ]
+} 

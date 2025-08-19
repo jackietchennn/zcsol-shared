@@ -1,0 +1,40 @@
+{
+  "name": "@jackiet/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint configurations for Jackiet Design Monorepo",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "base.js",
+    "react.js",
+    "vue.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript",
+    "react",
+    "vue"
+  ],
+  "author": "Jackiet Design",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^9.32.0",
+    "typescript": ">=5.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "eslint-plugin-vuejs-accessibility": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.32.0"
+  }
+}

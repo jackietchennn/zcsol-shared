@@ -1,0 +1,48 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // ===== 构建优化配置 =====
+    "noEmit": false,                       // 启用输出文件生成
+    "removeComments": true,                // 移除注释（生产环境）
+    "sourceMap": false,                    // 不生成 source map（生产环境）
+    "declarationMap": false,               // 不生成声明文件的 source map
+    
+    // ===== 性能优化 =====
+    "incremental": true,                   // 启用增量编译
+    "tsBuildInfoFile": "./node_modules/.cache/.tsbuildinfo",
+    
+    // ===== 严格模式（构建时） =====
+    "noUnusedLocals": true,               // 检查未使用的局部变量
+    "noUnusedParameters": true,            // 检查未使用的参数
+    "noImplicitReturns": true,            // 检查隐式返回
+    
+    // ===== 路径映射配置 =====
+    "baseUrl": ".",                        // 基础路径
+    "paths": {
+      "@shared/*": ["./packages/shared/src/*"],     // @shared 别名指向共享包
+      "@tiny-media/*": ["./packages/tiny-media/src/*"], // @tiny-media 别名
+      "@tiny-peony/*": ["./packages/tiny-peony/src/*"], // @tiny-peony 别名
+      "@packages/*": ["./packages/*"]               // @packages 通用别名
+    }
+  },
+  
+  // ===== 构建时包含的文件 =====
+  "include": [
+    "packages/*/src/**/*",                 // 包含所有包的源码
+    "packages/*/index.ts",                 // 包含所有包的入口文件
+    "packages/*/index.tsx"
+  ],
+  
+  // ===== 项目引用配置 =====
+  "references": [
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/tiny-media"
+    },
+    {
+      "path": "./packages/tiny-peony"
+    }
+  ]
+} 

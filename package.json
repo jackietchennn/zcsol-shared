@@ -1,0 +1,38 @@
+{
+  "name": "jackiet-design-monorepo",
+  "description": "Jackiet Design Monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "type-check": "tsc -b tsconfig.dev.json",
+    "type-check:watch": "tsc -b tsconfig.dev.json --watch",
+    "build": "tsc -b tsconfig.build.json",
+    "build:watch": "tsc -b tsconfig.build.json --watch",
+    "build:clean": "rm -rf packages/*/dist && rm -rf node_modules/.cache",
+    "build:packages": "pnpm -r build",
+    "dev": "pnpm -r dev",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.vue",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --fix",
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx,.vue --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:staged": "prettier --write --staged",
+    "clean": "rm -rf node_modules packages/*/node_modules packages/*/dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "prettier": "^3.6.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.1.1",
+    "typescript": "5.8.3",
+    "vue": "^3.0.0"
+  }
+}

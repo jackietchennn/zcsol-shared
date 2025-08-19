@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // ===== 包特定配置 =====
+    "outDir": "./dist",                    // 输出目录
+    "rootDir": "./src",                    // 根目录
+    "noEmit": false,                       // 允许生成输出文件
+    
+    // ===== 路径映射配置 =====
+    "baseUrl": ".",                        // 基础路径
+    "paths": {
+      "@/*": ["./src/*"],                  // 包内路径别名
+      "@tiny-media/*": ["./src/*"],        // 包内别名
+      "@shared/*": ["../shared/src/*"]     // 引用共享包
+    }
+  },
+  "include": [
+    "src/**/*",                            // 包含 src 目录下的所有文件
+    "index.ts",                            // 包含入口文件
+    "index.tsx"                            // 包含 TSX 入口文件
+  ],
+  "references": [
+    {
+      "path": "../shared"                  // 引用共享包
+    }
+  ]
+} 

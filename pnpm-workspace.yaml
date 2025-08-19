@@ -1,0 +1,13 @@
+packages:
+  - "packages/*"
+  - "!**/test/**"
+  - "!**/dist/**"
+  - "!**/node_modules/**"
+  - "!**/build/**"
+  - "!**/coverage/**"
+  - "!**/logs/**"
+  - "!**/temp/**"
+  - "!**/tmp/**"
+  - "!**/cache/**"
+  - "!**/logs/**"
+  - "!**/temp/**" 

@@ -1,0 +1,62 @@
+# 依赖目录
+node_modules/
+**/node_modules/
+
+# 构建输出
+dist/
+build/
+**/dist/
+**/build/
+
+# 缓存目录
+.cache/
+**/.cache/
+.next/
+.nuxt/
+
+# 测试覆盖率
+coverage/
+**/coverage/
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+temp/
+tmp/
+**/temp/
+**/tmp/
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 锁定文件
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 其他不需要检查的文件
+*.min.js
+*.min.css
+*.map
+.DS_Store
+Thumbs.db
+
+# 文档生成
+docs/
+**/docs/
+
+# 静态资源
+public/
+static/
+assets/
+**/public/
+**/static/
+**/assets/
+
+# 配置文件
+*.config.js
+*.config.ts 

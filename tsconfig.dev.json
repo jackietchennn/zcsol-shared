@@ -1,0 +1,40 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // ===== 开发环境配置 =====
+    "noEmit": true,                        // 不生成输出文件（仅类型检查）
+    "sourceMap": true,                     // 生成 source map（开发调试）
+    "declarationMap": true,                // 生成声明文件的 source map
+    "removeComments": false,               // 保留注释（开发环境）
+    
+    // ===== 路径映射配置 =====
+    "baseUrl": ".",                        // 基础路径
+    "paths": {
+      "@shared/*": ["./packages/shared/src/*"],     // @shared 别名指向共享包
+      "@tiny-media/*": ["./packages/tiny-media/src/*"], // @tiny-media 别名
+      "@tiny-peony/*": ["./packages/tiny-peony/src/*"], // @tiny-peony 别名
+      "@packages/*": ["./packages/*"]               // @packages 通用别名
+    }
+  },
+  
+  // ===== 开发时包含的文件 =====
+  "include": [
+    "src/**/*",                            // 包含根目录 src 下的所有文件
+    "packages/*/src/**/*",                 // 包含所有包的 src 目录
+    "packages/*/index.ts",                 // 包含所有包的入口 TypeScript 文件
+    "packages/*/index.tsx"                 // 包含所有包的入口 TSX 文件
+  ],
+  
+  // ===== 项目引用配置 =====
+  "references": [
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/tiny-media"
+    },
+    {
+      "path": "./packages/tiny-peony"
+    }
+  ]
+} 

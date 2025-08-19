@@ -1,0 +1,28 @@
+{
+  "name": "@jackiet-design/shared",
+  "version": "0.0.1",
+  "description": "Shared utilities and types for Jackiet Design",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  },
+  "keywords": [
+    "typescript",
+    "utilities",
+    "shared"
+  ],
+  "author": "Jackiet Design",
+  "license": "MIT"
+}
