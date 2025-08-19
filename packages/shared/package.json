@@ -4,6 +4,10 @@
   "description": "Shared utilities and types for Jackiet Design",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
