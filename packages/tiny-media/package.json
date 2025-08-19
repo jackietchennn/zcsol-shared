@@ -1,5 +1,5 @@
 {
-  "name": "@jackiet-design/tiny-media",
+  "name": "@zcsol/tiny-media",
   "version": "1.0.0",
   "description": "Media components for Jackiet Design",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
     "react-dom": ">=19.1.1"
   },
   "dependencies": {
-    "@jackiet-design/shared": "workspace:*"
+    "@zcsol/shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "5.8.3",
