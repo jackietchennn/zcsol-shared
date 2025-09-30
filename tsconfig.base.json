@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     // ===== 编译目标配置 =====
-    "target": "ES2020",                    // 编译目标版本：ES2020
-    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 包含的库：ES2020 + DOM API
+    "target": "ESNext",                    // 编译目标版本：ES2020
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // 包含的库：ES2020 + DOM API
     
     // ===== 模块系统配置 =====
     "module": "ESNext",                    // 模块系统：使用最新的 ES 模块
