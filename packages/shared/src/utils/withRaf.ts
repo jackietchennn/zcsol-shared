@@ -4,6 +4,16 @@ export type RafWrapped<T extends (...args: any[]) => void> = ((
   cancel: () => void;
 };
 
+/**
+ * Create a new function to wrap the specified function.
+ *
+ * This function takes one function argument, and returns
+ * a new function to follow the execution of requestAnimationFrame.
+ *
+ * @template T - The type of the function to wrap.
+ * @param {T} callback - The function to wrap.
+ * @returns {RafWrapped<T>} - A new function to follow the execution of requestAnimationFrame.
+ */
 export function withRaf<T extends (...args: any[]) => void>(
   callback: T
 ): RafWrapped<T> {
